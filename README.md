@@ -1,18 +1,23 @@
-# Landing Page - Productivity Accountability System
+# Landing Page - Digital Accountability Partner
 
-A modern, responsive landing page for your productivity accountability startup.
+A modern, responsive landing page for your digital accountability partner system.
 
 ## Overview
 
-This landing page is designed to capture the essence of your startup: helping people bridge the gap between learning productivity concepts and actually implementing them through an accountability system.
+**Philosophy:** Systems must do the work that willpower cannot sustain.
+
+This landing page showcases a digital accountability partner that helps people turn intentions into actions through systems, not motivation. Built on proven frameworks like Atomic Habits, The 12 Week Year, and Wild Courage—but designed for execution, not inspiration.
+
+The system is local-first, privacy-first, and brutally honest. No motivational fluff, no dopamine hits, just clear accountability and consistent follow-through.
 
 ## Features
 
 - **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
-- **Modern Animations**: Smooth fade-in effects and hover interactions
+- **Modern Animations**: Smooth fade-in effects and hover interactions on cards and workflow steps
 - **Waitlist Form**: Capture early user emails (currently stored in localStorage)
 - **Clean Design**: Purple gradient theme with professional typography
-- **Smooth Scrolling**: Seamless navigation between sections
+- **Multiple Sections**: Hero, Problems, Philosophy, How It Works, What Makes It Different, and Waitlist
+- **Scroll Animations**: Elements fade in as you scroll down the page
 
 ## File Structure
 
@@ -61,12 +66,16 @@ To change the gradient background, edit:
 #### Modify Sections
 
 Current sections:
-1. **Hero** (lines 16-32 in index.html) - Main headline and CTA
-2. **Problem/Solution** (lines 35-53) - Describes the issue and your solution
-3. **Waitlist** (lines 56-77) - Email collection form
-4. **Footer** (lines 81-85) - Copyright info
+1. **Hero** - Tagline, main headline "Do What You Say You'll Do", and CTA
+2. **Problems** - 6-card grid highlighting core problems (knowledge without action, too many plans, etc.)
+3. **Philosophy** - Core belief with quote: "Systems must do the work that willpower cannot sustain"
+4. **How It Works** - 4-step workflow (Morning Check-In, Daily Execution, Evening Review, Weekly Alignment)
+5. **What Makes This Different** - 4 key differentiators (Local-First, Brutally Honest, Systems Over Willpower, Execution-Focused)
+6. **Waitlist** - Email collection form with honest messaging
+7. **Footer** - Copyright info
 
-To add more sections, insert between existing sections and add corresponding CSS.
+Each section uses alternating background colors (white and light gray) for visual distinction.
+To modify content, edit the HTML directly. Corresponding CSS classes are named after the sections.
 
 #### Integrate Real Email Collection
 
@@ -111,41 +120,51 @@ All of these services offer free hosting for static sites.
 
 ## Suggested Improvements
 
-Once you have a name and refined messaging, consider:
+Future enhancements to consider:
 
 1. **Add your branding**
    - Logo in the hero section
    - Favicon (add `<link rel="icon" href="favicon.ico">` to HTML head)
    - Custom fonts from [Google Fonts](https://fonts.google.com)
+   - Finalize startup name (currently "Digital Accountability Partner")
 
 2. **Enhance content**
-   - Add a features section highlighting key benefits
-   - Include screenshots or mockups of your system
-   - Add social proof or testimonials once available
+   - Include screenshots or mockups of the Obsidian daily note system
+   - Add example accountability conversations
+   - Show execution score tracking visuals
+   - Add testimonials or case studies once available
 
 3. **SEO optimization**
-   - Update meta description (line 5 in index.html)
    - Add Open Graph tags for social sharing
    - Create sitemap.xml
+   - Add schema.org structured data
 
 4. **Analytics**
    - Add Google Analytics or [Plausible](https://plausible.io)
    - Track form submissions and conversions
+   - Monitor scroll depth to see which sections engage users
 
 5. **A/B testing**
    - Test different headlines
    - Try various CTA button text
-   - Experiment with form placement
+   - Experiment with the tone (brutally honest vs. more approachable)
 
 ## Current Messaging
 
-The landing page currently uses these key messages (feel free to refine):
+The landing page uses these key messages:
 
-- **Headline**: "Stop Reading. Start Doing."
-- **Subheadline**: "You've read the books. You know what to do. But somehow, nothing changes."
-- **Value Prop**: "We built an accountability system that bridges the gap between knowing and doing"
+- **Tagline**: "A system for consistent execution — not motivation"
+- **Headline**: "Do What You Say You'll Do."
+- **Subheadline**: "A digital accountability partner that turns intentions into actions through systems, not willpower."
+- **Core Philosophy**: "Systems must do the work that willpower cannot sustain."
+- **Value Props**:
+  - Knowledge without action solved
+  - Local-first and private (Obsidian, n8n, local AI)
+  - Brutally honest, no motivational fluff
+  - Based on proven frameworks (Atomic Habits, 12 Week Year, Wild Courage)
+  - Execution-focused with lead actions tracking
 
-These capture your core concept but can be adjusted based on your target audience and brand voice.
+The tone is direct, honest, and anti-hype. It emphasizes that this system works through confrontation and structure, not feel-good motivation.
 
 ## Technical Notes
 
@@ -169,8 +188,10 @@ The landing page is intentionally simple and easy to customize. All code is comm
 ---
 
 **Next Steps:**
-1. Decide on your startup name and finalize messaging
-2. Customize the colors to match your brand
-3. Set up email collection through a service
-4. Deploy to a hosting platform
-5. Share and collect feedback!
+1. Review the landing page and refine messaging if needed
+2. Finalize the startup name (or keep "Digital Accountability Partner")
+3. Set up email collection through a service (Mailchimp, ConvertKit, etc.)
+4. Add screenshots or visuals of your system in action
+5. Deploy to a hosting platform (Netlify, Vercel, etc.)
+6. Share with your target audience and collect feedback
+7. Consider adding your vision statement or more detail about the 12 Week Year methodology

@@ -99,10 +99,16 @@ const observer = new IntersectionObserver(function(entries) {
     });
 }, observerOptions);
 
-// Observe sections for animation
-document.querySelectorAll('.content-block').forEach(block => {
-    block.style.opacity = '0';
-    block.style.transform = 'translateY(30px)';
-    block.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-    observer.observe(block);
+// Observe cards and workflow steps for animation
+const animateElements = [
+    ...document.querySelectorAll('.problem-card'),
+    ...document.querySelectorAll('.workflow-step'),
+    ...document.querySelectorAll('.different-item')
+];
+
+animateElements.forEach(element => {
+    element.style.opacity = '0';
+    element.style.transform = 'translateY(30px)';
+    element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+    observer.observe(element);
 });

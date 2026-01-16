@@ -51,12 +51,22 @@ body {
     margin: 0 auto;
 }
 
+.hero-tagline {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
 .hero-title {
     font-size: 3.5rem;
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 1.5rem;
-    animation: fadeInUp 0.8s ease-out;
+    animation: fadeInUp 0.8s ease-out 0.1s backwards;
 }
 
 .highlight {
@@ -108,33 +118,170 @@ body {
     transform: translateY(-1px);
 }
 
-/* Problem/Solution Section */
-.problem-solution {
+/* Section Title (Global) */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+/* Problems Section */
+.problems {
+    padding: 100px 20px;
+    background-color: var(--background-alt);
+}
+
+.problems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.problem-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.problem-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.problem-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.problem-card p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Philosophy Section */
+.philosophy {
     padding: 100px 20px;
     background-color: var(--background);
 }
 
-.content-block {
-    max-width: 700px;
-    margin: 0 auto 60px;
+.philosophy-content {
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
 }
 
-.content-block:last-child {
-    margin-bottom: 0;
+.philosophy-quote {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    margin: 2rem 0 3rem;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
 }
 
-.section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: var(--text-primary);
+.philosophy-quote p {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.5;
+    font-style: italic;
 }
 
-.section-text {
+.philosophy-text {
     font-size: 1.25rem;
     color: var(--text-secondary);
     line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.philosophy-text:last-child {
+    margin-bottom: 0;
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding: 100px 20px;
+    background-color: var(--background-alt);
+}
+
+.workflow {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    gap: 3rem;
+}
+
+.workflow-step {
+    display: flex;
+    gap: 2rem;
+    align-items: start;
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.workflow-step h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.workflow-step p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* Different Section */
+.different {
+    padding: 100px 20px;
+    background-color: var(--background);
+}
+
+.different-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.different-item {
+    text-align: center;
+}
+
+.different-item h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.different-item p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
 }
 
 /* Waitlist Section */
@@ -152,8 +299,15 @@ body {
 
 .waitlist-subtitle {
     font-size: 1.25rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     opacity: 0.95;
+}
+
+.waitlist-note {
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 3rem;
+    opacity: 0.9;
 }
 
 .waitlist-form {
@@ -247,6 +401,10 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero-tagline {
+        font-size: 0.875rem;
+    }
+
     .hero-title {
         font-size: 2.5rem;
     }
@@ -261,14 +419,54 @@ body {
 
     .section-title {
         font-size: 2rem;
+        margin-bottom: 2rem;
     }
 
-    .section-text,
-    .waitlist-subtitle {
+    .problems-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .philosophy-quote {
+        padding: 1.5rem 2rem;
+    }
+
+    .philosophy-quote p {
+        font-size: 1.5rem;
+    }
+
+    .philosophy-text {
         font-size: 1.125rem;
     }
 
-    .problem-solution,
+    .workflow {
+        gap: 2rem;
+    }
+
+    .workflow-step {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .step-number {
+        margin: 0 auto;
+    }
+
+    .different-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .waitlist-subtitle,
+    .waitlist-note {
+        font-size: 1.125rem;
+    }
+
+    .problems,
+    .philosophy,
+    .how-it-works,
+    .different,
     .waitlist {
         padding: 60px 20px;
     }
@@ -280,6 +478,11 @@ body {
 }
 
 @media (max-width: 480px) {
+    .hero-tagline {
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+
     .hero-title {
         font-size: 2rem;
     }
@@ -290,6 +493,34 @@ body {
 
     .section-title {
         font-size: 1.75rem;
+    }
+
+    .problem-card {
+        padding: 1.5rem;
+    }
+
+    .philosophy-quote {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .philosophy-quote p {
+        font-size: 1.25rem;
+    }
+
+    .workflow-step h3 {
+        font-size: 1.25rem;
+    }
+
+    .workflow-step p {
+        font-size: 1rem;
+    }
+
+    .different-item h3 {
+        font-size: 1.25rem;
+    }
+
+    .different-item p {
+        font-size: 1rem;
     }
 
     .cta-button {
